@@ -12,6 +12,7 @@ export class UsersComponent {
 
   allowNewUser = false;
   userCreatedStatus = 'No User is created'
+  name = ''
 
   constructor() {
     //added this check property binding
@@ -23,6 +24,12 @@ export class UsersComponent {
 
   changeUserCreatedStatus () {
     this.userCreatedStatus = 'user is created'
+  }
+
+  onUpdateuser(e: Event) {
+    //below is doing typcasting cause event could be of click(any) type as well
+    this.name = (e.target as HTMLInputElement).value
+    console.log((e.target as HTMLInputElement).value)
   }
 
 }

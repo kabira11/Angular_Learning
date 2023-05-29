@@ -1,6 +1,16 @@
 <p>users works!</p>
+<div>
+  <label for="name">Name</label>
+  <!-- Below event bing explain and passing $event, $event present for every event-->
+  <input type="text" (input)="onUpdateuser($event)"/>
+  <div>{{ name }}</div>
+</div>
+<hr/>
 <button class="btn btn-primary" [disabled]="!allowNewUser" (click) = "changeUserCreatedStatus()">Add User</button>
+<hr/>
 <div>user is enabled {{ allowNewUser }}</div>
+<hr/>
 <div>{{ userCreatedStatus }}</div>
+<hr/>
 <app-user></app-user>
 <app-user></app-user>
