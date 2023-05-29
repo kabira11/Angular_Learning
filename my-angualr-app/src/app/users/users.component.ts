@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 export class UsersComponent {
 
   allowNewUser = false;
+  userCreatedStatus = 'No User is created'
 
   constructor() {
     //added this check property binding
@@ -18,6 +19,10 @@ export class UsersComponent {
     setTimeout(() => {
       this.allowNewUser = true;
     },3000)
+  }
+
+  changeUserCreatedStatus () {
+    this.userCreatedStatus = 'user is created'
   }
 
 }
