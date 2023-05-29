@@ -10,4 +10,14 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
 
+  allowNewUser = false;
+
+  constructor() {
+    //added this check property binding
+    // property binding denotes by []
+    setTimeout(() => {
+      this.allowNewUser = true;
+    },3000)
+  }
+
 }
