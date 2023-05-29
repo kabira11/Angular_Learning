@@ -7,7 +7,11 @@ import { Component } from "@angular/core";
 })
 
 export class UserComponent {
-  constructor() {
-
+  username : string = "Pankaj"
+  userId : number = 11;
+  userStatus : string = "Online"
+// string interploation metod and variables
+  getUser () {
+    return this.username
   }
 }
