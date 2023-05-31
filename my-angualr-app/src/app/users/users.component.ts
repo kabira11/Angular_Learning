@@ -13,6 +13,7 @@ export class UsersComponent {
   allowNewUser = false;
   userCreatedStatus = 'No User is created'
   name = ''
+  username = 'pankaj'
 
   constructor() {
     //added this check property binding

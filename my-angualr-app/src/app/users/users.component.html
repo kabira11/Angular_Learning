@@ -4,6 +4,12 @@
   <!-- Below event bing explain and passing $event, $event present for every event-->
   <input type="text" (input)="onUpdateuser($event)"/>
   <div>{{ name }}</div>
+  <hr/>
+  <!-- Two way binding example below-->
+  <label for="name">User Name</label>
+  <input type="text" [(ngModel)]="username"/>
+  <div>{{ username }}</div>
+  <hr/>
 </div>
 <hr/>
 <button class="btn btn-primary" [disabled]="!allowNewUser" (click) = "changeUserCreatedStatus()">Add User</button>
